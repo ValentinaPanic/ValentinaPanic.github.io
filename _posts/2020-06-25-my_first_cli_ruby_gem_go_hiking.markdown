@@ -9,9 +9,9 @@ permalink:  my_first_cli_ruby_gem_go_hiking
    I finished my very first Flatiron School project. It is hard to describe how satisfying that is.
    This project was to create a Command Line Interface (CLI) Ruby Gem. Only month and a half ago did I just learn what variable is and now I am about to create a Ruby Gem that will allow users to access some data. Sounds intimidating, right?? Well… It is.  
 	
- **  So what is a CLI?**  CLI (Command Line Interface) is a program on our computer that allows us to create and delete files, run programs, and navigate through folders and files.
+ **So what is a CLI?**  CLI (Command Line Interface) is a program on our computer that allows us to create and delete files, run programs, and navigate through folders and files.
 	
-   ** And what is a Ruby gem?** The software package is called a “gem” which contains a packaged Ruby application or library. Gems can be used to extend or modify functionality in Ruby applications.
+   **And what is a Ruby gem?** The software package is called a “gem” which contains a packaged Ruby application or library. Gems can be used to extend or modify functionality in Ruby applications.
  
  
    **How did I create Ruby gem?**
@@ -20,7 +20,7 @@ permalink:  my_first_cli_ruby_gem_go_hiking
      Before I decided what my gem’s functionality will be, I knew I wanted to use an API vs.  Web Scraping to get data I will use for this project. It seems to me that APIs are more common practice nowadays and  most companies offer APIs that will contain data that programmers will use in their applications. That is why I chose that route. 
 		 
  Deciding on a theme was kind of easy. I live in Colorado, the state that offers an amazing outdoors’s life. My goal was to offer users (mainly Denver visitors) a way to quickly decide on a hike trail they want to go on.
-    This website (https://www.hikingproject.com) has a nice list of great hikes. To get an API from them, I had to sign up and I received my API key that I used to get needed data. 
+    This website (http://www.hikingproject.com) has a nice list of great hikes. To get an API from them, I had to sign up and I received my API key that I used to get needed data. 
 		
  To create a gem, I needed to type bundle gem <file name> in my terminal. This command pre-populated a basic directory with:
 		
@@ -85,7 +85,7 @@ end
 
     I created the ApiManager class first because I wanted to have real data from the beginning. It is easier for me to debug if I see the real results. I have been using `binding.pry` in labs  before, but to be honest, working on this project I finally understand how helpful `pry` gem is. 
 		
-   I initially started a class method and used ` puts “Hello!”` as my code.  `puts` can be helpful as `binding.pry`. When I ran `bin/run`, I got an error. Permission denied, it said. I froze. The fear of breaking the app was so scary. Right then I learned about executable files and what it means. The first thing I did was to run `ls –lah` command which listed files and if it didn’t end with ‘x’ than that file was not executable. To change that I needed to run `chmod +x <file name>` and voila! My program output “Hello!”
+   I initially started a class method and used `puts “Hello!”`  as my code.  `puts` can be helpful as `binding.pry`. When I ran `bin/run`, I got an error. Permission denied, it said. I froze. The fear of breaking the app was so scary. Right then I learned about executable files and what it means. The first thing I did was to run `ls –lah` command which listed files and if it didn’t end with ‘x’ than that file was not executable. To change that I needed to run `chmod +x <file name>` and voila! My program output “Hello!”
 	 
  All of my files were linked properly and I was able to get to actual coding.  
  
