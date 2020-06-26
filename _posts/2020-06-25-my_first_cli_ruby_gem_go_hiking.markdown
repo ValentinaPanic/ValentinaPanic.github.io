@@ -22,12 +22,12 @@ permalink:  my_first_cli_ruby_gem_go_hiking
  Deciding on a theme was kind of easy. I live in Colorado, the state that offers an amazing outdoors’s life. My goal was to offer users (mainly Denver visitors) a way to quickly decide on a hike trail they want to go on.
     This website (http://www.hikingproject.com) has a nice list of great hikes. To get an API from them, I had to sign up and I received my API key that I used to get needed data. 
 		
- To create a gem, I needed to type bundle gem <file name> in my terminal. This command pre-populated a basic directory with:
+ To create a gem, I needed to type bundle gem go_hiking in my terminal. This command pre-populated a basic directory with:
 		
 * Bin
 * Lib
 * .gitignore
-* .gemspec
+* go_hiking.gemspec
 * Gemfile
 * License.txt
 * Rakefile
@@ -51,7 +51,7 @@ GoHiking::CLI.new.start
 
 
 
-  The first line `#!/usr/bin/env` ruby is called `shebang`. This line provides the shell with the absolute path to the Ruby interpreter. If I was writing my code in a different language, I would just use its name instead of `ruby` in this line of code. Having this code, my users only need to type bin/run in terminal and they will evoke the app. 
+  The first line `#!/usr/bin/env` ruby is called `shebang`. This line provides the shell with the absolute path to the Ruby interpreter. If I was writing my code in a different language, I would just use its name instead of `ruby` in this line of code. Having this code, my users only need to type `bin/run` in terminal and they will evoke the app. 
    Lib directory was installed with go_hiking folder which contains a version.rb file. As its name says this file shows the version of my gem. Also, go_hiking.rb file was created. I renamed it to environment.rb. This file handles all of the 'requiring'. 
 
 ```
@@ -80,12 +80,13 @@ end
    Lib folder will be responsible for holding the other files I created when building classes. For this app, I thought it would be enough to have only 3 different files:
 	 
 * 	api_manager.rb – This file contains class ApiManager which will be getting data from HikingProject API.
-* 	cli.rb – This file contains class CLI that is my controller class. I have #start method that will evoke other methods which will help me to show the list of trails when users use a command bin/run in their terminal.
+* 	cli.rb – This file contains class CLI that is my controller class. I have `#start` method that will evoke other methods which will help me to show the list of trails when users use a command `bin/run` in their terminal.
 * 	hike.rb – This file contains class Hike, which is the model class. Methods in this class are responsible for instantiating and creating new Hike objects. Each object will have attributes such as name, location, summary, difficulty, URL, hike_length.
 
     I created the ApiManager class first because I wanted to have real data from the beginning. It is easier for me to debug if I see the real results. I have been using `binding.pry` in labs  before, but to be honest, working on this project I finally understand how helpful `pry` gem is. 
 		
-   I initially started a class method and used `puts “Hello!”`  as my code.  `puts` can be helpful as `binding.pry`. When I ran `bin/run`, I got an error. Permission denied, it said. I froze. The fear of breaking the app was so scary. Right then I learned about executable files and what it means. The first thing I did was to run `ls –lah` command which listed files and if it didn’t end with ‘x’ than that file was not executable. To change that I needed to run `chmod +x <file name>` and voila! My program output “Hello!”
+ I initially started a class method and used `puts “Hello!”`  as my code.  `puts` can be as helpful as `binding.pry`. 
+When I ran `bin/run`, I got an error. Permission denied, it said. I froze. The fear of breaking the app was so scary. Right then I learned about executable files and what it means. The first thing I did was to run `ls –lah` command which listed files and if it didn’t end with ‘x’ than that file was not executable. To change that I needed to run `chmod +x <file name>` and voila! My program output “Hello!”
 	 
  All of my files were linked properly and I was able to get to actual coding.  
  
@@ -93,7 +94,7 @@ end
 * 	I learned how to create a gem, link files necessary for running the program. 
 * 	I feel comfortable using gem `pry` properly. 
 * 	I found out about gem `HTTParty`, which can be used to query web services and examine the resulting output. By default it will output the response as a pretty-printed Ruby object. This can also be overridden to output formatted XML or JSON.
-*  `Heredoc` was useful in two of my methods. A heredoc is a way to define a multiline string, while maintaining the original indentation & formatting. I started with the symbol <<-, then a word that represents the name for this heredoc, the heredoc contents, then I closed the heredoc with that same word on its own line.
+*  `Heredoc` was useful in two of my methods. A heredoc is a way to define a multiline string, while maintaining the original indentation and formatting. I started with the symbol <<-, then a word that represents the name for this heredoc, the heredoc contents, then I closed the heredoc with that same word on its own line.
 
 
 ```
