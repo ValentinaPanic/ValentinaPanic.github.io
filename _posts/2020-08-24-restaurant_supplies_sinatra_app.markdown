@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "Restaurant Supplies Sinatra App"
-date:       2020-08-24 05:36:44 +0000
+date:       2020-08-24 01:36:45 -0400
 permalink:  restaurant_supplies_sinatra_app
 ---
 
 
-I built a very simple Sinatra app. How satisfying the feeling is.I have been working on it for days.  
+I built a very simple Sinatra app.I have been working on it for days.  
 
 Initially, I started working on the project with confidence. The first two days went by smoothly, and then I fell in my code trap. I made it too complicated so my instructor told me that will be a great project for Rails. I stepped back and started the app from scratch.
 
