@@ -29,6 +29,7 @@ Actions are POJO (plain old JavaScript object). Each action must have a type and
  
  
 This is an example of an action creator from my application.  `days` is the action’s payload 
+
 ``` 
  export const setDays = days => { 
     
@@ -36,11 +37,14 @@ This is an example of an action creator from my application.  `days` is the acti
         type: "SET_DAYS", 
         days 
     } 
-} ```
+} 
+```
+
 ## Reducer 
  
 Once we create the action, it is sent to the reducer, which is just a pure function. It takes 2 arguments: the current state and an action. Using switch statement reducers go through the action types and describes how to change the state depending on the type. 
 This is example of a reducer from my application. 
+
 ```
 const days = (state = [], action) => { 
         switch (action.type) { 
@@ -53,12 +57,14 @@ const days = (state = [], action) => {
             return state 
    } 
   } 
-  export default days ```
+  export default days 
+	```
  
  
 ## Store 
  
 Redux store is the object that holds the application’s state. The convention is to have one store in the application, and this is the process of creating the store: 
+
 ``` 
 import { createStore } from 'redux' 
 import { Provider } from 'react-redux' 
@@ -71,17 +77,20 @@ ReactDOM.render(
     </Router> 
   </Provider>, 
   document.getElementById('root') 
-); ```
+);  
+```
  
  
 So what do we do with all of this?? 
 The next step is to import `connect` in the React component in which we plan to get the state from the store or dispatch an action or both. 
 This is the process: 
+
 ```
 import { connect } from 'react-redux'; 
-import { setDays } from './actions/days'; ```
+import { setDays } from './actions/days';
+```
  
-`connect` accepts 4 arguments, but mostly 2 of them are only used. The first one is always `mapStateToProps` if we are not planning on using it we can place null instead of the function. The second one is `mapDispatchToProps`  
+`connect` accepts four arguments, but only two of them are used mostly. The first one is always `mapStateToProps` if we are not planning on using it we can place null instead of the function. The second one is `mapDispatchToProps`  
 `mapStateToProps` is a function that returns a state object, and we can be as specific as needed with the piece of state we need for the component in React. 
 `mapDispatchToProps` is dispatching the desired action to the store. 
  
