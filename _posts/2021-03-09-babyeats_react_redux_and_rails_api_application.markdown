@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "BabyEats – React/Redux and Rails API application"
-date:       2021-03-09 19:08:19 +0000
+date:       2021-03-09 14:08:19 -0500
 permalink:  babyeats_react_redux_and_rails_api_application
 ---
 
@@ -110,7 +110,7 @@ const mapStateToProps = state => {
  } 
 } 
    
-export default connect(mapStateToProps, {setDays})(App); ```
+export default connect(mapStateToProps, {setDays})(App);  ```
  
 It is easy to love and hate Redux at the same time. It seems that there are too many steps to get it to work, but once you understand its purpose it is so convenient when storing all of the state data in one container. 
  
